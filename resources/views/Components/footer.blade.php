@@ -17,10 +17,10 @@
       <div class="text-center md:text-left">
         <h3 class="text-gray-900 font-semibold mb-4 text-base">Quick Links</h3>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="#our-story" class="hover:text-yellow-600 transition-colors">Home</a></li>
-          <li><a href="#products" class="hover:text-yellow-600 transition-colors">Products</a></li>
-          <li><a href="#recipes" class="hover:text-yellow-600 transition-colors">Contact Us</a></li>
-          <li><a href="#contact" class="hover:text-yellow-600 transition-colors">Catalog</a></li>
+          <li><a href="/" class="hover:text-yellow-600 transition-colors">Home</a></li>
+          <li><a href="/products" class="hover:text-yellow-600 transition-colors">Products</a></li>
+          <li><a href="/contact" class="hover:text-yellow-600 transition-colors">Contact Us</a></li>
+          <li><a href="#" class="hover:text-yellow-600 transition-colors">Catalog</a></li>
         </ul>
       </div>
 
@@ -68,17 +68,18 @@
       
       <!-- Social Icons -->
       <div class="flex justify-center space-x-4">
-        <a href="#" aria-label="Facebook" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-yellow-600 transition group">
+        <a href="https://www.facebook.com/share/1ECNiEaWkZ/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-yellow-600 transition group">
           <i class="fab fa-facebook-f text-gray-600 group-hover:text-white text-sm"></i>
         </a>
-        <a href="#" aria-label="Instagram" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-yellow-600 transition group">
+        <a href="https://www.instagram.com/raadoil_lb?igsh=Y2c2N3Rrd29qYXRn" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-yellow-600 transition group">
           <i class="fab fa-instagram text-gray-600 group-hover:text-white text-sm"></i>
         </a>
-        <a href="#" aria-label="TikTok" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-yellow-600 transition group">
+        <a href="https://www.tiktok.com/@raadoil?_t=ZS-8ykxUvoXfQf&_r=1" aria-label="TikTok" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-yellow-600 transition group">
           <i class="fab fa-tiktok text-gray-600 group-hover:text-white text-sm"></i>
         </a>
-         <a href="https://www.google.com/maps?q=Daher+El+Ain,+Koura,+North+Lebanon"
+         <a href="https://maps.app.goo.gl/zpnpHGAjWgrZy3Cx7?g_st=ac"
      target="_blank"
+     rel="noopener noreferrer"
      aria-label="Location"
      class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-yellow-600 transition group">
     <i class="fas fa-map-marker-alt text-gray-600 group-hover:text-white text-sm"></i>

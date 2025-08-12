@@ -26,3 +26,8 @@ Route::get('/products',function(){
 Route::get('/allproducts',function(){
     return view('allproducts');
 });
+
+use App\Http\Controllers\ContactController;
+
+Route::post('/contact/submit', [ContactController::class, 'store'])->name('contact.store');
+

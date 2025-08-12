@@ -17,7 +17,7 @@
 
     <!-- Logo -->
     <a href="/" class="flex-shrink-0">
-      <img src="/images/logo.png" alt="Raad Oil Logo" class="h-10">
+      <img src="https://raadoilimages.s3.eu-north-1.amazonaws.com/logo.png" alt="Raad Oil Logo" class="h-10">
     </a>
 
     <!-- Desktop Nav -->

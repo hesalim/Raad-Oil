@@ -4,7 +4,7 @@
      <section class="relative h-screen overflow-hidden">
     <!-- Optimized background image -->
     <img
-      src="/images/herosection5.WebP"
+      src="https://raadoilimages.s3.eu-north-1.amazonaws.com/herosection5.WebP"
       alt="Olive background"
       class="absolute inset-0 w-full h-full object-cover z-0"
       loading="eager"
@@ -85,7 +85,7 @@
 
   <!-- Top-Left Decorative Accent -->
   <img
-    src="/images/DecorativeTopLeft.WebP"
+    src="https://raadoilimages.s3.eu-north-1.amazonaws.com/DecorativeTopLeft.WebP"
     alt=""
     class="absolute top-0 left-0 w-64 md:w-80 opacity-30 pointer-events-none transform -translate-x-8 -translate-y-8 -rotate-12"
   />
@@ -97,7 +97,7 @@
       class="overflow-hidden rounded-3xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hidden md:block"
     >
       <img
-        src="/images/OurStory1.WebP"
+        src="https://raadoilimages.s3.eu-north-1.amazonaws.com/OurStory1.WebP"
         alt="Raad Oil Origins"
         class="w-full h-full object-cover"
       />
@@ -130,27 +130,98 @@
         </p>
       </div>
 
-      <div data-aos="fade-up" class="mt-8 flex justify-center md:justify-start">
-  <a
-    href="/videos/our-story.mp4"
-    class="inline-flex items-center px-6 py-3 bg-yellow-500 text-white font-medium rounded-full shadow-xl hover:bg-yellow-600 shadow-2xl transition-shadow duration-300"
+    <!-- Open Video Button -->
+<div data-aos="fade-up" class="mt-8 flex justify-center md:justify-start">
+  <button
+    id="openVideoBtn"
+    type="button"
+    class="inline-flex items-center px-6 py-3 bg-yellow-500 text-white font-medium rounded-full shadow-xl hover:bg-yellow-600 transition-shadow duration-300"
   >
     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
       <path d="M4.5 3.5v13l11-6.5-11-6.5z" />
     </svg>
     Watch Our Story
-  </a>
+  </button>
 </div>
+
+
 
     </div>
   </div>
 
   <!-- Bottom-Right Decorative Accent -->
   <img
-    src="/images/DecorativeOurStory.WebP"
+    src="https://raadoilimages.s3.eu-north-1.amazonaws.com/DecorativeOurStory.WebP"
     alt=""
     class="absolute bottom-0 right-0 w-64 md:w-80 opacity-20 pointer-events-none transform translate-x-12 translate-y-12"
   />
+ <!-- Video Modal -->
+<div id="videoModal" class="fixed inset-0 z-[999] hidden items-center justify-center" aria-hidden="true">
+  <!-- Backdrop -->
+  <div id="videoBackdrop" class="absolute inset-0 bg-black/70"></div>
+
+  <!-- Dialog  -->
+  <div role="dialog" aria-modal="true" aria-labelledby="videoTitle"
+       class="relative z-10 mx-4 w-full max-w-4xl rounded-2xl bg-white shadow-2xl overflow-hidden">
+
+    <!-- Video wrapper -->
+    <div class="aspect-video w-full bg-black relative">
+      <video id="ourStoryVideo" class="h-full w-full" controls playsinline>
+        <source src="/media/ourstory.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Close button -->
+      <button
+        id="closeVideoBtn"
+        type="button"
+        class="absolute right-3 top-3 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black focus:outline-none"
+        aria-label="Close video"
+      >
+        ✕
+      </button>
+    </div>
+
+    <h3 id="videoTitle" class="sr-only">Our Story</h3>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const openBtn  = document.getElementById('openVideoBtn');
+    const modal    = document.getElementById('videoModal');
+    const backdrop = document.getElementById('videoBackdrop');
+    const closeBtn = document.getElementById('closeVideoBtn');
+    const video    = document.getElementById('ourStoryVideo');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.setAttribute('aria-hidden', 'false');
+      try { video.currentTime = 0; } catch(e) {}
+      video.play().catch(() => {});
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      modal.setAttribute('aria-hidden', 'true');
+      video.pause();
+      try { video.currentTime = 0; } catch(e) {}
+      document.body.style.overflow = '';
+    }
+
+    openBtn?.addEventListener('click', openModal);
+    closeBtn?.addEventListener('click', closeModal);
+    backdrop?.addEventListener('click', closeModal);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+  })();
+</script>
+
+
 </section>
 
 

@@ -15,57 +15,61 @@
 
       <!-- Contact Form Card -->
       <div class="bg-white relative rounded-2xl shadow-xl p-8 sm:p-10 border border-gray-100 z-10">
-        <form action="/contact/submit" method="POST" class="space-y-6">
-          @csrf
+        @if(session('status'))
+  <div class="mb-4 text-green-600">{{ session('status') }}</div>
+@endif
 
-          <!-- Name Fields -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label for="first_name" class="block text-sm font-medium text-gray-700 mb-1">First name</label>
-              <input type="text" name="first_name" id="first_name" required
-                     placeholder="John"
-                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400" />
-            </div>
-            <div>
-              <label for="last_name" class="block text-sm font-medium text-gray-700 mb-1">Last name</label>
-              <input type="text" name="last_name" id="last_name" required
-                     placeholder="Doe"
-                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400" />
-            </div>
-          </div>
+@if ($errors->any())
+  <div class="mb-4 text-red-600">
+    <ul class="list-disc pl-5">
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
 
-          <!-- Email -->
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <input type="email" name="email" id="email" required
-                   placeholder="you@example.com"
-                   class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400" />
-          </div>
+       <form action="{{ route('contact.store') }}" method="POST" class="space-y-6">
+  @csrf
+           <!-- Honeypot: must stay empty -->
+  <input type="text" name="trap" class="hidden" tabindex="-1" autocomplete="off">
 
-          <!-- Phone -->
-          <div>
-            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-            <input type="tel" name="phone" id="phone"
-                   placeholder="123-456-7890"
-                   class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400" />
-          </div>
+  <!-- Replace first/last with one Name field (matches controller rules) -->
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+    <input type="text" name="name" id="name" required
+           placeholder="John Doe"
+           class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400" />
+  </div>
 
-          <!-- Message -->
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-            <textarea name="message" id="message" rows="5" required
-                      placeholder="Write your message here..."
-                      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400"></textarea>
-          </div>
+  <!-- Keep email -->
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+    <input type="email" name="email" id="email" required
+           placeholder="you@example.com"
+           class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400" />
+  </div>
 
-          <!-- Submit Button -->
-          <div>
-            <button type="submit"
-                    class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold text-lg rounded-lg px-6 py-3 shadow-lg hover:shadow-xl transition duration-300">
-              Send Message
-            </button>
-          </div>
-        </form>
+  <!-- Optional phone (backend will accept it if we add rule) -->
+  <div>
+    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+    <input type="tel" name="phone" id="phone"
+           placeholder="123-456-7890"
+           class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400" />
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+    <textarea name="message" id="message" rows="5" required
+              placeholder="Write your message here..."
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:outline-none transition placeholder-gray-400"></textarea>
+  </div>
+
+  <button type="submit"
+          class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold text-lg rounded-lg px-6 py-3 shadow-lg hover:shadow-xl transition duration-300">
+    Send Message
+  </button>
+</form>
       </div>
     </div>
   </section>

@@ -67,61 +67,70 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="100">
 
       <!-- Category Card Template -->
-      <a href="/products/extra-virgin-olive-oil" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
-        <img src="/images/oilproduct.jpg" alt="Extra Virgin Olive Oil" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <h3 class="text-white text-lg font-semibold drop-shadow">Extra Virgin Olive Oil</h3>
-        </div>
-      </a>
+      {{-- Extra Virgin Olive Oil --}}
+<a href="/allproducts?category={{ rawurlencode('Extra Virgin Olive Oil') }}" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+  <img src="/images/oilproduct.jpg" alt="Extra Virgin Olive Oil" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
+  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+    <h3 class="text-white text-lg font-semibold drop-shadow">Extra Virgin Olive Oil</h3>
+  </div>
+</a>
 
-      <a href="/products/olives" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
-        <img src="/images/oliveproduct.jpg" alt="Olives" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <h3 class="text-white text-lg font-semibold drop-shadow">Olives</h3>
-        </div>
-      </a>
+{{-- Olives --}}
+<a href="/allproducts?category={{ rawurlencode('Olives') }}" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+  <img src="/images/oliveproduct.jpg" alt="Olives" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
+  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+    <h3 class="text-white text-lg font-semibold drop-shadow">Olives</h3>
+  </div>
+</a>
 
-      <a href="/products/pickles" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
-        <img src="/images/pickledproduct.jpg" alt="Pickles" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <h3 class="text-white text-lg font-semibold drop-shadow">Pickles</h3>
-        </div>
-      </a>
+{{-- Pickles --}}
+<a href="/allproducts?category={{ rawurlencode('Pickles') }}" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+  <img src="/images/pickledproduct.jpg" alt="Pickles" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
+  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+    <h3 class="text-white text-lg font-semibold drop-shadow">Pickles</h3>
+  </div>
+</a>
 
-      <a href="/products/starters" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
-        <img src="/images/startersproduct.jpg" alt="Starters" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <h3 class="text-white text-lg font-semibold drop-shadow">Starters</h3>
-        </div>
-      </a>
+{{-- Starters --}}
+<a href="/allproducts?category={{ rawurlencode('Starters') }}" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+  <img src="/images/startersproduct.jpg" alt="Starters" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
+  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+    <h3 class="text-white text-lg font-semibold drop-shadow">Starters</h3>
+  </div>
+</a>
 
-      <a href="/products/vinegar-syrup-molasses" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
-        <img src="/images/vinegarproduct.jpg" alt="Vinegar, Syrup, and Molasses" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <h3 class="text-white text-lg font-semibold drop-shadow">Vinegar, Syrup & Molasses</h3>
-        </div>
-      </a>
+{{-- Vinegar, Syrup & Molasses --}}
+<a href="/allproducts?category={{ rawurlencode('Vinegar, Syrup & Molasses') }}" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+  <img src="/images/vinegarproduct.jpg" alt="Vinegar, Syrup and Molasses" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
+  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+    <h3 class="text-white text-lg font-semibold drop-shadow">Vinegar, Syrup & Molasses</h3>
+  </div>
+</a>
 
-      <a href="/products/lebanese-specialties" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
-        <img src="/images/applevinegarproduct.jpg" alt="Lebanese Specialties" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <h3 class="text-white text-lg font-semibold drop-shadow">Lebanese Specialties</h3>
-        </div>
-      </a>
+{{-- Lebanese Specialties --}}
+<a href="/allproducts?category={{ rawurlencode('Lebanese Specialties') }}" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+  <img src="/images/applevinegarproduct.jpg" alt="Lebanese Specialties" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
+  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+    <h3 class="text-white text-lg font-semibold drop-shadow">Lebanese Specialties</h3>
+  </div>
+</a>
 
-      <a href="/products/sweets" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
-        <img src="/images/lemonjuiceproduct.jpg" alt="Sweets" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <h3 class="text-white text-lg font-semibold drop-shadow">Sweets</h3>
-        </div>
-      </a>
+{{-- Sweets --}}
+<a href="/allproducts?category={{ rawurlencode('Sweets') }}" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+  <img src="/images/lemonjuiceproduct.jpg" alt="Sweets" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
+  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+    <h3 class="text-white text-lg font-semibold drop-shadow">Sweets</h3>
+  </div>
+</a>
 
-      <a href="/products/olive-oil-soap" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
-        <img src="/images/oliveproduct.jpg" alt="Natural Olive Oil Soap" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <h3 class="text-white text-lg font-semibold drop-shadow">Natural Olive Oil Soap</h3>
-        </div>
-      </a>
+{{-- Natural Olive Oil Soap --}}
+<a href="/allproducts?category={{ rawurlencode('Natural Olive Oil Soap') }}" class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+  <img src="/images/oliveproduct.jpg" alt="Natural Olive Oil Soap" class="w-full h-80 object-cover transition duration-300 group-hover:brightness-105" loading="lazy" />
+  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+    <h3 class="text-white text-lg font-semibold drop-shadow">Natural Olive Oil Soap</h3>
+  </div>
+</a>
+
 
     </div>
 
