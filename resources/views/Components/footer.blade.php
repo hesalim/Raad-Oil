@@ -87,6 +87,13 @@
       </div>
       <!-- Copyright -->
       <p class="text-sm text-gray-500 ">&copy; 2025 RAAD. All rights reserved.</p>
+      <!-- Developer Credit -->
+  <p class="text-xs text-gray-400">
+    Developed by 
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" rel="noopener noreferrer" class="text-yellow-600 hover:underline">
+      Helena Salim
+    </a>
+  </p>
     </div>
 
   </div>

@@ -18,7 +18,7 @@
     <div class="relative z-20 flex items-center h-full">
       <div class="max-w-2xl px-6 md:px-12">
         <h1 class="text-5xl font-bold leading-tight text-white">
-          <span>Discover the <span class="text-yellow-500">Legac</span></span><br />
+          <span>Discover the <span class="text-yellow-500">Legacy</span></span><br />
           of Raad Olive Oil
         </h1>
 
