@@ -21,6 +21,15 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Deploying to Render
+
+This repo includes a `render.yaml` blueprint and a `server.php` router to deploy on Render.
+
+Steps:
+- Push your repo, then in Render click New → Blueprint and pick the repo.
+- After first deploy, set `APP_KEY` in the service Environment (generate locally with `php artisan key:generate --show`).
+- Optional: set mail env vars (`MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_FROM_*`).
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
