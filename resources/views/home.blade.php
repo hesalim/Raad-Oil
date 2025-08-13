@@ -39,11 +39,13 @@
         </p>
 
         <a
-          href="/products"
-          class="mt-8 inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50"
-        >
-          Explore Our Products
-        </a>
+  href="/products"
+  class="mt-8 inline-block text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105 focus:outline-none"
+  style="background-color: #FBBF24; --tw-ring-color: #FBBF24;"
+>
+  Explore Our Products
+</a>
+
       </div>
     </div>
   </section>
