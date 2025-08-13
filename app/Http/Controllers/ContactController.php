@@ -2,23 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreContactRequest;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use App\Mail\ContactMessage;
 
 class ContactController extends Controller
 {
-    public function store(Request $request)
+    public function store(StoreContactRequest $request)
     {
-        // Validate + honeypot
-        $data = $request->validate([
-            'name'    => ['required','string','max:100'],
-            'email'   => ['required','email','max:255'],
-            'phone'   => ['nullable','string','max:50'],
-            'message' => ['required','string','max:5000'],
-            'trap'    => ['nullable','string','size:0'], // hidden field must stay empty
-        ]);
+        $data = $request->validated();
 
         // Build the payload the mailable/email view expects
         $payload = [
@@ -33,7 +26,7 @@ class ContactController extends Controller
         $subject = trim(($prefix ? $prefix.' ' : '') . 'New contact form message');
 
         try {
-            Mail::to($to)->send(
+            Mail::to($to)->queue(
                 (new ContactMessage($payload))
                     ->subject($subject)
                     ->replyTo($payload['email'], $payload['name']) // replies go to the visitor

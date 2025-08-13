@@ -6,10 +6,15 @@
     
     <title>Raad Oil</title>
     <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
+    <meta name="color-scheme" media="(prefers-color-scheme: dark)" content="light">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#ffffff">
     <meta name="description" content="Raad Oil crafts premium olive oil with purity and tradition. Discover authentic flavor. | رعد أويل تنتج زيت زيتون عالي الجودة، نقي وأصيل، بطعم لا يُنسى.">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       
 </head>

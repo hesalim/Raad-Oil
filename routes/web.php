@@ -2,32 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/contact', function(){
-return view('contact');
-});
-Route::get('/olive-products',function(){
-return view('olive-products');
-});
-
-Route::get('/oil-products',function(){
-    return view('oil-products');
-});
-
-
-Route::get('/pickle-products',function(){
-    return view('pickle-products');
-});
-Route::get('/products',function(){
-    return view('products');
-});
-Route::get('/allproducts',function(){
-    return view('allproducts');
-});
+Route::view('/', 'home')->name('home');
+Route::view('/contact', 'contact')->name('contact');
+Route::view('/olive-products', 'olive-products')->name('olive.products');
+Route::view('/oil-products', 'oil-products')->name('oil.products');
+Route::view('/pickle-products', 'pickle-products')->name('pickle.products');
+Route::view('/products', 'products')->name('products');
+Route::view('/allproducts', 'allproducts')->name('allproducts');
 
 use App\Http\Controllers\ContactController;
 
-Route::post('/contact/submit', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact/submit', [ContactController::class, 'store'])
+    ->middleware(['throttle:6,1','web'])
+    ->name('contact.store');
 

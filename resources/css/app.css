@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@source "../views/**/*.blade.php";
+@source "../js/**/*.{js,ts,vue}";
+
+/* Keep brand yellows consistent in mobile dark mode (opt out of auto darkening) */
+.bg-yellow-500,
+.hover\:bg-yellow-600,
+.text-yellow-500,
+.hover\:text-yellow-600,
+.ring-yellow-400,
+.border-yellow-600 {
+  color-scheme: light;
+}
+
+/* FORCE LIGHT MODE GLOBALLY */
+:root, html, body {
+  color-scheme: light !important;
+}
+@media (prefers-color-scheme: dark) {
+  :root, html, body { color-scheme: light !important; }
+}
+
+
